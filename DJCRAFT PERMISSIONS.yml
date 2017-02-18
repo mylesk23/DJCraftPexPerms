@@ -2,15 +2,7 @@ groups:
   Owner:
     permissions:
     -  *
-    prefix:  '&f[&bOwner&f]'
-  SrAdmin:
-    permissions:
-    worlds:
-      Prison:
-        prefix: '&f[&bSr-Warden&f]'
-        permissions:
-        inheritance:
-        -  Admin
+    prefix:  '&bOwner &f|'
   Admin:
     permissions:
     -  essentials.clearinventory.all
@@ -25,168 +17,140 @@ groups:
     -  essentials.tpohere
     -  essentials.tptoggle.others
     -  essentials.signs.protection.override
-    worlds:
-      Prison:
-        prefix: '&f[&bWarden&f]'
-        permissions:
-        inheritance:
-        -  JrAdmin     
-  JrAdmin:
+    -  essentials.ban.exempt
+    -  worldguard.halt-activity
+    -  worldguard.reload
+    -  essentials.banip
+    -  essentials.sudo
+    -  essentials.tempban.exempt
+    -  essentials.tempban.offline
+    -  essentials.vanish.others
+    -  essentials.vanish.pvp
+    -  essentials.vanish.see
+    -  essentials.delhome.others
+    -  essentials.sethome.others
+    -  essentials.signs.break.*
+    -  essentials.signs.create.*
+    -  essentials.signs.enchant.*
+    -  essentials.bigtree
+    -  essentials.eco
+    -  essentials.unbanip
+    -  essentials.enderchest.modify
+    -  essentials.delwarp
+    -  essentials.tptoggle
+    -  essentials.warp.otherplayers
+    -  essentials.gamemode.others
+    -  essentials.god.pvp
+    -  essentials.broadcast
+    prefix:  '&cAdmin &f|&r'
+  Mod+:
     permissions:
-        -  essentials.ban.exempt
-        -  worldguard.halt-activity
-        -  worldguard.reload
-        -  essentials.banip
-        -  essentials.sudo
-        -  essentials.tempban.exempt
-        -  essentials.tempban.offline
-        -  essentials.vanish.others
-        -  essentials.vanish.pvp
-        -  essentials.vanish.see
-        -  essentials.delhome.others
-        -  essentials.sethome.others
-        -  essentials.signs.break.*
-        -  essentials.signs.create.*
-        -  essentials.signs.enchant.*
-        -  essentials.bigtree
-        -  essentials.eco
-    worlds:
-      Prison:
-        prefix: '&f[&bJr-Warden&f]'
-        permissions:
-
-        inheritance:
-  SrMod:
-    permissions:
-         -  worldguard.fire-toggle.stop
-         -  essentials.broadcast
-         -  essentials.enderchest.modify
-         -  essentials.unbanip
-         -  essentials.delwarp
-         -  essentials.tptoggle
-         -  essentials.warp.otherplayers
-         -  essentials.gamemode.others
-         -  essentials.god.pvp
-         -  essentials.chat.ignoreexempt
-         -  essentials.list.hidden
-    worlds:
-      Prison:
-        prefix: '&f[&cSnr-Officer&f]'
-        permissions:
-
-        inheritance:
-        -  Mod
+    -  worldguard.fire-toggle.stop
+    -  essentials.chat.ignoreexempt
+    -  essentials.list.hidden
+    prefix:  '&eMod&c+ &f|&r'
   Mod:
     permissions:
-        -  essentials.ban.notify
-        -  essentials.ban.offline
-        -  essentials.ban
-        -  worldguard.stack
-        -  worldguard.slay.other
-        -  worldguard.heal.other
-        -  worldguard.god.other
-        -  worldguard.region.define.*
-        -  essentials.kick.*
-        -  essentials.clearinventory.others
-        -  essentials.enderchest.others
-        -  essentials.invsee.modify
-        -  essentials.lightning
-        -  essentials.spawnmob.*
-        -  essentials.togglejail.offline
-        -  essentials.unban
-        -  essentials.vanish
-        -  essentials.vanish.interact
-        -  essentials.home.others
-        -  essentials.setwarp
-        -  essentials.warp.overwrite.*
-        -  essentials.tp.others
-        -  essentials.tphere
-        -  essentials.teleport.timer.bypass
-        -  essentials.chat.format
-        -  essentials.chat.magic
-        -  essentials.geoip.hide
-        -  enchanter.enchant
-        -  essentials.exp
-        -  essentials.exp.give.others
-        -  essentials.exp.give
-        -  essentials.exp.set
-        -  essentials.exp.set.others
-        -  essentials.feed.cooldown.bypass
-        -  essentials.feed.others
-        -  essentials.fly.others
-        -  essentials.gamemode
-        -  essentials.give
-        -  essentials.oversizedstacks
-        -  essentials.god.others
-        -  essentials.heal.others
-        -  essentials.ptime.others
-        -  essentials.afk.others
-        -  essentials.itemdb
-    worlds:
-      Prison:
-        prefix: '&f[&cOfficer&f]'
-        permissions:
-
-        inheritance:
-        -  JrMod
-  JrMod:
+    -  essentials.ban.notify
+    -  essentials.ban.offline
+    -  essentials.ban
+    -  worldguard.stack
+    -  worldguard.slay.other
+    -  worldguard.heal.other
+    -  worldguard.god.other
+    -  worldguard.region.define.*
+    -  essentials.kick.*
+    -  essentials.clearinventory.others
+    -  essentials.enderchest.others
+    -  essentials.invsee.modify
+    -  essentials.lightning
+    -  essentials.spawnmob.*
+    -  essentials.togglejail.offline
+    -  essentials.unban
+    -  essentials.vanish
+    -  essentials.vanish.interact
+    -  essentials.home.others
+    -  essentials.setwarp
+    -  essentials.warp.overwrite.*
+    -  essentials.tp.others
+    -  essentials.tphere
+    -  essentials.teleport.timer.bypass
+    -  essentials.chat.format
+    -  essentials.chat.magic
+    -  essentials.geoip.hide
+    -  enchanter.enchant
+    -  essentials.exp
+    -  essentials.exp.give.others
+    -  essentials.exp.give
+    -  essentials.exp.set
+    -  essentials.exp.set.others
+    -  essentials.feed.cooldown.bypass
+    -  essentials.feed.others
+    -  essentials.fly.others
+    -  essentials.gamemode
+    -  essentials.give
+    -  essentials.oversizedstacks
+    -  essentials.god.others
+    -  essentials.heal.others
+    -  essentials.ptime.others
+    -  essentials.afk.others
+    -  essentials.itemdb
+    prefix:  '&eMod &f|&r'
+  Trusted:
     permissions:
-        -  essentials.kick
-        -  worldguard.slay
-        -  worldguard.heal
-        -  worldguard.god
-        -  worldguard.region.wand.*
-        -  worldguard.region.claim.*
-        -  worldguard.region.unlimited.*
-        -  worldguard.region.list.*
-        -  worldguard.region.addmember.*
-        -  worldguard.region.info.*
-        -  essentials.mute.*
-        -  essentials.kick
-        -  essentials.kick.notify
-        -  essentials.clearinventory
-        -  essentials.enderchest
-        -  essentials.ext
-        -  essentials.invsee
-        -  essentials.jails
-        -  essentials.kill
-        -  essentials.tempban
-        -  essentials.togglejail
-        -  essentials.weather
-        -  essentials.spawn.others
-        -  essentials.back.*
-        -  essentials.jump
-        -  essentials.top
-        -  essentials.tp
-        -  essentials.tppos
-        -  essentials.chat.color
-        -  essentials.chat.url
-        -  essentials.geoip.show
-        -  essentials.joinfullserver
-        -  essentials.signs.color
-        -  essentials.signs.format
-        -  essentials.signs.magic
-        -  essentials.sleepingignored
-        -  essentials.exp.others
-        -  essentials.feed
-        -  essentials.fly
-        -  essentials.fly.safelogin
-        -  essentials.itemspawn.*
-        -  essentials.god
-        -  essentials.hat
-        -  essentials.heal
-        -  essentials.heal.cooldown.bypass
-        -  essentials.more
-        -  essentials.ptime
-        -  essentials.repair
-        -  essentials.skull.*
-        -  essentials.speed.*
-        -  essentials.workbench
-        -  essentials.afk.kickexempt
-        -  essentials.book.*
-        -  essentials.getpos.*
-        -  essentials.msg.url
-    worlds:
-      Prison:
-        prefix: '&f[&cJr-Officer&f]'
-        permissions:
+    -  essentials.kick
+    -  worldguard.slay
+    -  worldguard.heal
+    -  worldguard.god
+    -  worldguard.region.wand.*
+    -  worldguard.region.claim.*
+    -  worldguard.region.unlimited.*
+    -  worldguard.region.list.*
+    -  worldguard.region.addmember.*
+    -  worldguard.region.info.*
+    -  essentials.mute.*
+    -  essentials.kick
+    -  essentials.kick.notify
+    -  essentials.clearinventory
+    -  essentials.enderchest
+    -  essentials.ext
+    -  essentials.invsee
+    -  essentials.jails
+    -  essentials.kill
+    -  essentials.tempban
+    -  essentials.togglejail
+    -  essentials.weather
+    -  essentials.spawn.others
+    -  essentials.back.*
+    -  essentials.jump
+    -  essentials.top
+    -  essentials.tp
+    -  essentials.tppos
+    -  essentials.chat.color
+    -  essentials.chat.url
+    -  essentials.geoip.show
+    -  essentials.joinfullserver
+    -  essentials.signs.color
+    -  essentials.signs.format
+    -  essentials.signs.magic
+    -  essentials.sleepingignored
+    -  essentials.exp.others
+    -  essentials.feed
+    -  essentials.fly
+    -  essentials.fly.safelogin
+    -  essentials.itemspawn.*
+    -  essentials.god
+    -  essentials.hat
+    -  essentials.heal
+    -  essentials.heal.cooldown.bypass
+    -  essentials.more
+    -  essentials.ptime
+    -  essentials.repair
+    -  essentials.skull.*
+    -  essentials.speed.*
+    -  essentials.workbench
+    -  essentials.afk.kickexempt
+    -  essentials.book.*
+    -  essentials.getpos.*
+    -  essentials.msg.url
+    prefix:  '&dTrusted &f|&r'
